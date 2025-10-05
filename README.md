@@ -80,4 +80,4 @@ Desarrollar una aplicación web que permita a usuarios autenticados participar e
 
 ---
 
-> **Nota:** Este proyecto se encuentra en fase de planificación. Las tecnologías y arquitectura finales estarán sujetas a validación durante el desarrollo.
+> **Nota:** Este proyecto se encuentra en fase de planificación. Las tecnologías y arquitectura finales estarán sujetas a validación y respectivas sugerencias y recomendaciones de la tutora durante el desarrollo.
