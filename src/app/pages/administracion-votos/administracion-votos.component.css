@@ -1,0 +1,33 @@
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Asegura que estén uno debajo del otro */
+    align-items: center; /* Centra horizontalmente */
+    width: 100%;
+  }
+  
+  /* Estilo de los botones */
+  .custom-btn {
+    width: 300px; /* Tamaño fijo */
+    max-width: 80%; /* Responsivo */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: center;
+  }
+  
+  /* Efecto hover */
+  .custom-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Ajustes para móviles */
+  @media (max-width: 576px) {
+    .custom-btn {
+      width: 90%;
+      font-size: 18px;
+    }
+  }
+  

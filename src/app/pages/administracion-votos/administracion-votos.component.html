@@ -1,0 +1,45 @@
+<div class="container d-flex flex-column align-items-center justify-content-start vh-100">
+  <div class="mt-5 button-container">
+    <button type="button" class="btn custom-btn btn-primary btn-lg mb-3" data-toggle="modal" data-target="#resultadosModal">
+      Ver Resultados de Votación
+    </button>
+    <button class="btn custom-btn btn-danger btn-lg" (click)="eliminarTodosLosVotos()">
+      Eliminar Votos
+    </button>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="resultadosModal" tabindex="-1" role="dialog" aria-labelledby="resultadosModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content rounded">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultadosModalLabel">Resultados de Votación</h5>
+      </div>
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Candidato</th>
+                <th scope="col">Votos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let candidato of votos">
+                <td>{{ candidato.id }}</td>
+                <td>{{ candidato.votos }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
