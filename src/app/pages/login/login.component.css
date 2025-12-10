@@ -1,0 +1,59 @@
+/* Fondo completo con degradado */
+body {
+  background: linear-gradient(135deg, #187bff, #4a63ff);
+  height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* Tarjeta elegante */
+.card {
+  padding: 35px;
+  margin: 20px auto;
+
+  background: #ffffffee;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: center;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Inputs */
+.form-control {
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  border: 1px solid #d0d0d0;
+  background: #f8f8f8;
+  transition: 0.2s;
+}
+
+/* Botón */
+.btn-primary {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+/* EN FORZAMOS ANCHO AQUÍ */
+.card {
+  width: 80% !important;      /* <-- ocupa el 80% de la pantalla */
+  max-width: none !important; /* <-- elimina límites */
+  padding: 40px !important;   /* opcional, que no quede apretada */
+}
+
+.my-card {
+  width: 30vw !important;     /* usa ancho de pantalla real */
+  max-width: none !important; /* elimina límites */
+  min-width: 350px;           /* evita que se haga chiquita */
+  padding: 40px;
+}
+
+

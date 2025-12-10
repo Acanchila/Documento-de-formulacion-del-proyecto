@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" routerLink="/perfil">
+          <img src="/assets/imagenes/logo.png" alt="Logo Colegio Boston" class="school-logo">
+          <span class="school-brand">Colegio Boston</span>
+        </a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+  <li class="nav-item" *ngIf="role">
+    <a class="nav-link" routerLink="/votar">Votar</a>
+  </li>
+
+  <li class="nav-item" *ngIf="role === 'admin'">
+    <a class="nav-link" (click)="openAdminModal()">Administración de Votos</a>
+  </li>
+
+  <li class="nav-item" *ngIf="role">
+    <a class="nav-link" (click)="logout()">Cerrar sesión</a>
+  </li>
+
+  <li class="nav-item" *ngIf="!role">
+    <a class="nav-link" routerLink="/login">Login</a>
+  </li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+  

@@ -9,3 +9,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.main-content {
+  padding-top: 130px; /* ajusta según la altura real del navbar */
+}

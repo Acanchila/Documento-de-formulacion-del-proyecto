@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+
+   <div *ngIf="showPasswordModal" class="modal fade show" style="display: block;" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Ingrese la Contraseña</h5>
+        </div>
+        <div class="modal-body">
+          <input type="password" class="form-control" [(ngModel)]="passwordInput" placeholder="Contraseña">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="cancelAdmin()">Cancelar</button>
+          <button type="button" class="btn btn-primary" (click)="confirmAdmin()">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Vista de votación -->
+  
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-12 d-flex justify-content-center mb-3" 
+             *ngFor="let perfil of perfiles">
+          <app-perfil
+            [nombre]="perfil.nombre"
+            [imagen]="perfil.imagen"
+            [disabled]="perfil.votado"
+            (voteCast)="handleVote(perfil)">
+          </app-perfil>
+        </div>
+      </div>
+    </div>
+  
+  
+  <!-- Mensaje de agradecimiento -->
+  <div *ngIf="algunVotoHecho" class="overlay d-flex align-items-center justify-content-center vh-100">
+    <div class="thank-you-message bg-light p-4 rounded shadow">
+      <h2>Gracias por tu voto</h2>
+    </div>
+  </div>
+  
+  <!-- Vista de administración -->
+  <div *ngIf="view === 'admin'" class="container mt-5">
+    <app-administracion-votos></app-administracion-votos>
+  </div>

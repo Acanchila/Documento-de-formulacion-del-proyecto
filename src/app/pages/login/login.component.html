@@ -1,0 +1,28 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+ <div class="card p-4 shadow my-card">
+
+    
+    <h3 class="text-center mb-3">Iniciar Sesión</h3>
+
+    <input 
+      [(ngModel)]="email" 
+      class="form-control mb-3" 
+      type="email" 
+      placeholder="Correo">
+
+    <input 
+      [(ngModel)]="password" 
+      class="form-control mb-3" 
+      type="password" 
+      placeholder="Contraseña">
+
+    <button class="btn btn-primary w-100 mb-2" (click)="login()">Entrar</button>
+
+    <p class="mt-2">¿No tienes cuenta?</p>
+    <a routerLink="/register">Crear cuenta</a>
+
+    <p class="text-danger text-center mt-3">{{ errorMessage }}</p>
+
+  </div>
+</div>
+

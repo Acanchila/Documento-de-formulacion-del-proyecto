@@ -7,17 +7,24 @@ import { VotosService } from 'src/app/services/votos.service';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent {
+
   @Input() nombre: string = '';
   @Input() imagen: string = '';
-  @Input() disabled: boolean = false; // Para deshabilitar el botón
+  @Input() disabled: boolean = false;
 
-  @Output() voteCast = new EventEmitter<void>(); // Emite cuando se realiza un voto
+  // ESTE es el nombre correcto porque tu votar.component.html espera "voteCast"
+  @Output() voteCast = new EventEmitter<void>();
 
-  constructor(private votosService: VotosService) { }
+  constructor(private votosService: VotosService) {}
 
   votar() {
-    if (this.disabled) return; // Si está deshabilitado, no hace nada
+    if (this.disabled) return;
+
+    // Guardar voto en el servicio
     this.votosService.votar(this.nombre);
+
+    // Emitir evento al componente padre (votar.component)
     this.voteCast.emit();
   }
 }
+

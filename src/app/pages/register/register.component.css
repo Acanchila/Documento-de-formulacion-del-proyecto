@@ -1,0 +1,105 @@
+/* Fondo completo con degradado */
+body {
+  background: linear-gradient(135deg, #187bff, #4a63ff);
+  height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tarjeta igual a LOGIN */
+.register-container {
+  width: 30vw;
+  min-width: 350px;
+  background: #ffffffee;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Título igual a login */
+.register-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+/* INPUTS estilo login */
+.input-field {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  border: 1px solid #d0d0d0;
+  background: #f8f8f8;
+  transition: all 0.2s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input-field:focus {
+  border-color: #187bff;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(24, 123, 255, 0.2);
+  outline: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* BOTÓN igual al login */
+.btn {
+  width: 100%;
+  padding: 14px;
+  background: #187bff;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background: #0f6ae4;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* ENLACE igual al login */
+a {
+  color: #187bff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Mensajes */
+.error {
+  color: #d9534f;
+  margin-top: 10px;
+}
+
+.success {
+  color: #28a745;
+  margin-top: 10px;
+}

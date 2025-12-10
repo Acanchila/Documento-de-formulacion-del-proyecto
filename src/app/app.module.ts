@@ -12,7 +12,10 @@ import { environment } from '../environments/environment';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { AdministracionVotosComponent } from './pages/administracion-votos/administracion-votos.component';
 import { FormsModule } from '@angular/forms';
-
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { NavbarComponent } from './pages/navbar/navbar.component';
+import { VotarComponent } from './pages/votar/votar.component';
 // Asegúrate de declarar también tus otros componentes, por ejemplo:
 
 
@@ -20,7 +23,11 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     PerfilComponent,
-    AdministracionVotosComponent
+    AdministracionVotosComponent,
+    LoginComponent,
+    RegisterComponent,
+    NavbarComponent,
+    VotarComponent
   ],
   imports: [
     BrowserModule,
